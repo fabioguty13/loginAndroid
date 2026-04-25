@@ -3,11 +3,19 @@ package com.example.loginandroid.login
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
-sealed class Routes: NavKey {
+/**
+ * Definición de las rutas de navegación de la aplicación.
+ */
+sealed class Routes : NavKey {
+    @Serializable
+    data object Home : Routes()
+
     @Serializable
     data object Categories : Routes()
 
     @Serializable
-    data object Products : Routes()
-}
+    data class Products(val categoryId: Int? = null) : Routes()
 
+    @Serializable
+    data class ProductDetail(val productId: Int) : Routes()
+}

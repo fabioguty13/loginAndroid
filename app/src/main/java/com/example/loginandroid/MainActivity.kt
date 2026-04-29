@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.loginandroid.ui.theme.LoginAndroidTheme
 import android.util.Log
+import com.example.loginandroid.data.SessionManager
+import com.example.loginandroid.data.network.KtorClient
 import com.example.loginandroid.login.LoginWrapper
 
 class MainActivity : ComponentActivity() {
@@ -17,6 +19,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         Log.e(TAG, "Aplicacion principal creada")
+
+        val sessionManager = SessionManager(applicationContext)
+        KtorClient.tokenProvider = { sessionManager.getToken() }
 
         enableEdgeToEdge()
         setContent {

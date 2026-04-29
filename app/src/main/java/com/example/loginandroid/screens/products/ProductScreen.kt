@@ -29,6 +29,7 @@ fun ProductScreen(
     onProductClick: (Int) -> Unit,
     onNavigateToHome: () -> Unit,
     onNavigateToMenu: () -> Unit,
+    onLogout: () -> Unit,
     productViewModel: ProductViewModel = viewModel()
 ) {
     val currentProductList = productViewModel.productList
@@ -45,7 +46,8 @@ fun ProductScreen(
             AppTopBar(
                 title = "Productos",
                 onHomeClick = onNavigateToHome,
-                onMenuClick = onNavigateToMenu
+                onMenuClick = onNavigateToMenu,
+                onLogoutClick = onLogout
             )
         }
     ) { paddingValues ->

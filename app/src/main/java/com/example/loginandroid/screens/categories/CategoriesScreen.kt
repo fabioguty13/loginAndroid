@@ -24,6 +24,7 @@ fun CategoriesScreen(
     onCategoryClick: (Int) -> Unit,
     onNavigateToHome: () -> Unit,
     onNavigateToMenu: () -> Unit,
+    onLogout: () -> Unit,
     categoriesViewModel: CategoriesViewModel = viewModel()
 ) {
     val categoriesList = categoriesViewModel.categories
@@ -35,7 +36,8 @@ fun CategoriesScreen(
             AppTopBar(
                 title = "Categorías",
                 onHomeClick = onNavigateToHome,
-                onMenuClick = onNavigateToMenu
+                onMenuClick = onNavigateToMenu,
+                onLogoutClick = onLogout
             )
         }
     ) { paddingValues ->

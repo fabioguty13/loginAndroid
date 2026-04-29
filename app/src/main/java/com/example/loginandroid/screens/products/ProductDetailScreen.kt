@@ -29,7 +29,8 @@ import com.example.loginandroid.ui.components.LoadingView
 fun ProductDetailScreen(
     productId: Int,
     onNavigateToHome: () -> Unit,
-    onNavigateToMenu: () -> Unit
+    onNavigateToMenu: () -> Unit,
+    onLogout: () -> Unit
 ) {
     val repository = remember { ProductRepository() }
     var product by remember { mutableStateOf<Product?>(null) }
@@ -51,7 +52,8 @@ fun ProductDetailScreen(
             AppTopBar(
                 title = "Detalle del Producto",
                 onHomeClick = onNavigateToHome,
-                onMenuClick = onNavigateToMenu
+                onMenuClick = onNavigateToMenu,
+                onLogoutClick = onLogout
             )
         }
     ) { paddingValues ->

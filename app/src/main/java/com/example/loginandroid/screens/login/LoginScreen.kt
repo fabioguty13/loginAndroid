@@ -83,7 +83,7 @@ fun LoginScreen(
             Spacer(Modifier.height(24.dp))
 
             Text(
-                text = "Tienda Grupo 4",
+                text = "App E-Commerce",
                 style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.primary
             )

@@ -2,7 +2,7 @@ package com.example.loginandroid.data.repository
 
 import com.example.loginandroid.data.network.client
 import com.example.loginandroid.data.network.model.Product
-import io.ktor.client.call.body
+import io.ktor.client.call.body 
 import io.ktor.client.request.get
 
 /**

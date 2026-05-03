@@ -73,7 +73,7 @@ fun HomeScreen(
                         Spacer(Modifier.height(16.dp))
                     }
                     Text(
-                        text = "Bienvenido a la Tienda Grupo 4",
+                        text = "Bienvenido a la App E-Commerce",
                         style = MaterialTheme.typography.headlineSmall,
                         color = MaterialTheme.colorScheme.primary,
                         textAlign = TextAlign.Center
